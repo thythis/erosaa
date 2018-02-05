@@ -1,0 +1,13 @@
+body {
+    background: #222;
+}
+
+p {
+    color: #333;
+    font: 700 200px/1em Oswald, san-serif;
+    letter-spacing: -8px;
+    margin: 0;
+    text-align: center;
+    text-shadow: 0 5px 25px rgba(0,0,0,0.5), 0 2px 0 rgba(0,0,0,0.5), 0 -2px 0 rgba(255,255,255,0.25) ;
+    text-transform: uppercase;
+}
