@@ -1,0 +1,27 @@
+{
+  "name": "eros",
+  "version": "1.0.0",
+  "description": "leo's doc",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "vuepress": "^0.7.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thythis/eros.git"
+  },
+  "author": "leo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thythis/eros/issues"
+  },
+  "homepage": "https://github.com/thythis/eros#readme"
+}
