@@ -15,7 +15,5 @@ deploy:
   github_token: 
     secure: pYzmovVPiL8zZmHN9zwBLQ
   local_dir: docs/.vuepress/dist
-  fqdn: $CUSTOM_DOMAIN
-  name: $GIT_NAME
   on:
     branch: master
