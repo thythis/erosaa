@@ -2,4 +2,10 @@ language: node_js
 node_js:
  - '9.4.0'
 
-script: npm run docs:build
+script: 
+npm run docs:build
+cd docs/.vuepress/dist
+git init
+git add -A
+git commit -m 'deploy'
+git push -f git@github.com:thythis/eros.git master:gh-pages
