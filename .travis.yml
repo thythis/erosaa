@@ -1,11 +1,22 @@
 language: node_js
+
 node_js:
- - '9.4.0'
+  - "9"
+
+before_install:
+  - export TZ='Asia/Shanghai'
 
 script: 
   - npm run docs:build
-  - cd docs/.vuepress/dist
-  - git init
-  - git add -A
-  - git commit -m 'deploy'
-  - git push -f git@github.com:thythis/eros.git master:gh-pages
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: 
+    secure: pYzmovVPiL8zZmHN9zwBLQ
+  local_dir: docs/.vuepress/dist
+  fqdn: $CUSTOM_DOMAIN
+  name: $GIT_NAME
+  email: $GIT_EMAIL
+  on:
+    branch: master
