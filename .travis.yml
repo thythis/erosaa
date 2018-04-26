@@ -1,19 +1,16 @@
 language: node_js
-
 node_js:
-  - "9"
-
+- '9'
 before_install:
-  - export TZ='Asia/Shanghai'
-
-script: 
-  - npm run docs:build
-
+- export TZ='Asia/Shanghai'
+script:
+- npm run docs:build
 deploy:
   provider: pages
   skip_cleanup: true
-  github_token: 
-    secure: pYzmovVPiL8zZmHN9zwBLQ
   local_dir: docs/.vuepress/dist
   on:
     branch: master
+env:
+  global:
+    secure: GJ2qCA4iFeKA1jrvHEUmRexnNKRu57VJ/UNnY3KauTs9bcYpHs3G77QKJa01k+B8kceugLy0bFzTpZPD/kgvcS2p2hMUg9JwoQoXH/PFadQI6FJBh19otz2NuzScZ0Zla7JyJ/LPtKpsYvTi0keS80x5v00GpM3pimCn43rjJ1iyrLmCvLs6gesM+VoAPl3RrhiJCVCpIt0tbb1OjHz0KGNh6ywy9r1UBwzDwnkQWpSB0ahc+xQsuhLNOXJ5fTuAV1l4u+Cyp4L7HZcSos7tuCCjT/MsR5r3wVbhginAYR1RFD9cim6pUb+DaOJN2HfMRTajES+to9wppnOuo4pk4jv7mtD4vECIpcMj955m9iL5OV0wZNL33e2qFELzAUbCf9b94+4xUvynE8Aakv7aakjBAZJpr8eYRNfhaoN4v4kbq0PpcJ146g6P0ez1p4XpR5JI+rT2QXxf4UQxN8coBnjDyDsSPISE/jYnL/PkHkcTVcNPNKE28UYEtQ3/MDeuXwGp3gCp1eh+dRSnRPW+MbwkUoSZnlz1zzDTBezQWkzarp2M4O3QNXoWJzQ4RZfkCdR1mmYP08zno2JlScw2GrudcOzo3MxB04oa1nErQlvG/GXb7fABE8R58nNcPdkuJedv6KDYvA+mH68s8FyHKBTmPjEorEW2g5CtVLZIU3A=
