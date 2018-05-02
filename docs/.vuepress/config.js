@@ -1,5 +1,11 @@
 module.exports = {
     base: "/eros/",
-    title: 'Hello thysama',
-    description: 'Just playing around'
+    title: 'Thyme land',
+    description: 'Just playing around',
+    themeConfig: {
+        nav: [
+            { text: 'Home', link: '/' },
+            { text: 'Bill', link: '/bill/' }
+        ]
+    }
 }
