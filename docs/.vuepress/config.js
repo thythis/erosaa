@@ -6,6 +6,14 @@ module.exports = {
         nav: [
             { text: 'Home', link: '/' },
             { text: 'Bill', link: '/bill/' }
+        ],
+        sidebar: [
+            {
+                title: 'Technologies',
+                children: [
+                    '/Technologies/'
+                ]
+            }
         ]
     }
 }
