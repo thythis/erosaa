@@ -1,3 +1,15 @@
+## Jun
+::: tip total: 7599
+- **: 3217
+- Rent: 1261
+- jd: 1481
+- Ali Pay: 600
+- clothes: 240
+- film: 300
+- subscription fee: 100
+- supplement: 200
+- subway: 200
+:::
 ## May
 ::: tip total: 9293
 - **: 980
