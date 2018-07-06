@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Thyme land | Async function</title>
+    <meta name="description" content="Just playing around">
+    
+    
+    <link rel="preload" href="/eros/assets/css/3.styles.94560a9a.css" as="style"><link rel="preload" href="/eros/assets/js/app.6acc636d.js" as="script"><link rel="preload" href="/eros/assets/js/1.f2167d10.js" as="script"><link rel="prefetch" href="/eros/assets/js/0.b1d217b6.js"><link rel="prefetch" href="/eros/assets/js/2.9c31c4f3.js">
+    <link rel="stylesheet" href="/eros/assets/css/3.styles.94560a9a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/eros/" class="home-link router-link-active"><!----><span class="site-name">
+      Thyme land
+    </span></a><div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""><!----></div><nav class="nav-links can-hide"><div class="nav-item"><a href="/eros/" class="nav-link">Home</a></div><div class="nav-item"><a href="/eros/bill/" class="nav-link">Bill</a></div><!----></nav></div></header><div class="sidebar-mask"></div><div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/eros/" class="nav-link">Home</a></div><div class="nav-item"><a href="/eros/bill/" class="nav-link">Bill</a></div><!----></nav><ul class="sidebar-links"><li><div class="sidebar-group first collapsable"><p class="sidebar-heading open"><span>Technologies</span><span class="arrow down"></span></p><ul class="sidebar-group-items"><li><a href="/eros/Technologies/" class="active sidebar-link">Async function</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/eros/Technologies/#async-function" class="sidebar-link">Async function</a></li></ul></li></ul></div></li></ul></div><div class="page"><div class="content"><h2 id="async-function"><a href="#async-function" aria-hidden="true" class="header-anchor">#</a> Async function</h2><h3 id="example"><a href="#example" aria-hidden="true" class="header-anchor">#</a> example</h3><pre class="language-javascript"><code><span class="token keyword">async</span> <span class="token function">componentDidMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> response <span class="token operator">=</span> <span class="token keyword">await</span> 
+            <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token template-string"><span class="token string">`https://api.github.com/repos/facebook/react/stargazers`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>response<span class="token punctuation">.</span>ok<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">throw</span> <span class="token function">Error</span><span class="token punctuation">(</span>response<span class="token punctuation">.</span>statusText<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">const</span> json <span class="token operator">=</span> <span class="token keyword">await</span> response<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> data<span class="token punctuation">:</span> json <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">error</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><h3 id="babel-config"><a href="#babel-config" aria-hidden="true" class="header-anchor">#</a> babel config</h3><p>.babelrc</p><pre class="language-javascript"><code><span class="token punctuation">{</span>
+    <span class="token string">&quot;presets&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">[</span><span class="token string">&quot;env&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;targets&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">&quot;browsers&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&quot;last 2 Chrome versions&quot;</span><span class="token punctuation">]</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token string">&quot;react&quot;</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div><!----><!----></div></div></div>
+    <script src="/eros/assets/js/1.f2167d10.js" defer></script><script src="/eros/assets/js/app.6acc636d.js" defer></script>
+  </body>
+</html>
